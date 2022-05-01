@@ -428,6 +428,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cdbee22096625047953e2ae76e08a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgImage: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  puzzles: []
+  gamePuzzles: []
   buttons: []
 --- !u!1 &1519520265
 GameObject:
