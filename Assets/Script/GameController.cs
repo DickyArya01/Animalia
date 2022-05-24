@@ -27,6 +27,8 @@ public class GameController : MonoBehaviour
         GetButton();
         AddListeners();
         AddGamePuzzles();
+        Shuffle(gamePuzzles);
+        gameGuesses = gamePuzzles.Count / 2;
 
     } 
 
@@ -80,8 +82,57 @@ public class GameController : MonoBehaviour
             secondGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
             secondGuessName = gamePuzzles[secondGuessIndex].name;
             buttons[secondGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
+            countGuesses++;
+            StartCoroutine(CheckIfThePuzzlesMatch());
             
+        }
+        
+    }
+
+    IEnumerator CheckIfThePuzzlesMatch() {
+        yield return new WaitForSeconds (1f);
+        if (firstGuessName == secondGuessName) {
+            yield return new WaitForSeconds (.5f);
+
+            buttons[firstGuessIndex].interactable = false;
+            buttons[secondGuessIndex].interactable = false;
+
+            buttons[firstGuessIndex].image.color = new Color(0, 0, 0, 0);
+            buttons[secondGuessIndex].image.color = new Color(0, 0, 0, 0);
+            
+            CheckIfTheGameIsFinished();
+
+        } else {
+        
+            yield return new WaitForSeconds(.5f);
+
+            buttons[firstGuessIndex].image.sprite = bgImage;
+            buttons[secondGuessIndex].image.sprite= bgImage;
+
+        }
+
+        yield return new WaitForSeconds(.5f);
+
+        firstGuess = secondGuess = false;
+        
+    }
+
+    void CheckIfTheGameIsFinished() {
+        countCorrectGuesses++;
+
+        if(countCorrectGuesses == gameGuesses) {
+            Debug.Log("Game finished");
+            Debug.Log("It took "+ countGuesses + " guesses to finished");
         }
     }
 
+    void Shuffle(List<Sprite> list) {
+        for (int i = 0; i < list.Count; i++) {
+            
+            Sprite temp = list[i];
+            int randomIndex = Random.Range(i, list.Count);
+            list[i] = list[randomIndex];
+            list[randomIndex] = temp;
+        }
+    }
 }
