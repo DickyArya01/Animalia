@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
     } 
 
     void Awake() {
-        puzzles = Resources.LoadAll<Sprite> ("Sprites/animals");
+        puzzles = Resources.LoadAll<Sprite> ("Sprites/herbivora");
     }
 
     void GetButton() {
@@ -66,7 +66,7 @@ public class GameController : MonoBehaviour
 
     public void PickUpPuzzle() {
         string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
-        Debug.Log(name +" is clicked");
+
     }
 
 }
