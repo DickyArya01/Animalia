@@ -65,8 +65,23 @@ public class GameController : MonoBehaviour
     }
 
     public void PickUpPuzzle() {
-        string name = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
 
+        if(!firstGuess) {
+
+            firstGuess = true;
+            firstGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+            firstGuessName = gamePuzzles[firstGuessIndex].name;
+            buttons[firstGuessIndex].image.sprite = gamePuzzles[firstGuessIndex];
+
+        }else if (!secondGuess)
+        {
+
+            secondGuess = true;
+            secondGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
+            secondGuessName = gamePuzzles[secondGuessIndex].name;
+            buttons[secondGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
+            
+        }
     }
 
 }
