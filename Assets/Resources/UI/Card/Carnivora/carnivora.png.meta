@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 285ee37d8ac9fbc4e8a8ceb2e7054378
+guid: b0a66affd3e3bf74c9fa7c6adc2ebded
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6485884899471823300
-    second: backcrad_0
+      213: 72371397985679307
+    second: carnivora_0
+  - first:
+      213: 397503951575221154
+    second: carnivora_1
+  - first:
+      213: -3455270865404470518
+    second: carnivora_2
+  - first:
+      213: 8196385150712148027
+    second: carnivora_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -44,11 +53,11 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
+  spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -90,13 +99,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: backcrad_0
+      name: carnivora_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 96
+        width: 308
+        height: 308
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,8 +113,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3e69e03c028df5a0800000000000000
-      internalID: -6485884899471823300
+      spriteID: bc7b5dc276d110100800000000000000
+      internalID: 72371397985679307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carnivora_1
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 308
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a38476ecb7348500800000000000000
+      internalID: 397503951575221154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carnivora_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 308
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b5fc864796c00d0800000000000000
+      internalID: -3455270865404470518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carnivora_3
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 308
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30fb764ed86fb170800000000000000
+      internalID: 8196385150712148027
       vertices: []
       indices: 
       edges: []

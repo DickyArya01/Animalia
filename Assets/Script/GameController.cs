@@ -8,6 +8,9 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private Sprite bgImage;
 
+    [SerializeField]
+    public string pathImage;
+
     public Sprite[] puzzles;
 
     public List<Sprite> gamePuzzles = new List<Sprite>();
@@ -22,8 +25,14 @@ public class GameController : MonoBehaviour
 
     private string firstGuessName, secondGuessName;
 
+    private Timer timer;
+
+    [SerializeField]
+    private GameObject gameFinished;
+
     void Start() {
         
+        timer = new Timer();
         GetButton();
         AddListeners();
         AddGamePuzzles();
@@ -33,7 +42,7 @@ public class GameController : MonoBehaviour
     } 
 
     void Awake() {
-        puzzles = Resources.LoadAll<Sprite> ("Sprites/herbivora");
+        puzzles = Resources.LoadAll<Sprite> (pathImage);
     }
 
     void GetButton() {
@@ -121,8 +130,34 @@ public class GameController : MonoBehaviour
         countCorrectGuesses++;
 
         if(countCorrectGuesses == gameGuesses) {
-            Debug.Log("Game finished");
             Debug.Log("It took "+ countGuesses + " guesses to finished");
+            if(timer.OnEnd())
+            {
+                gameFinished.SetActive(true);
+                Time.timeScale = 0f;
+
+                if (countGuesses == 4)
+                {
+                    Debug.Log("Bintang 5");
+
+                }else if (countGuesses > 4 && countGuesses <= 6 )
+                {
+                    Debug.Log("Bintang 4");
+                    
+                }else if (countGuesses > 6 && countGuesses <= 8 )
+                {
+                    Debug.Log("Bintang 3");
+
+                }else if (countGuesses > 8 && countGuesses <= 12)
+                {
+                    Debug.Log("Bintang 2");
+
+                }else if (countGuesses > 12)
+                {
+                    Debug.Log("Bintang 1");
+
+                }
+            }
         }
     }
 

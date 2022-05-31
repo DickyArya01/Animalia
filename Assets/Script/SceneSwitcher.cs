@@ -16,6 +16,7 @@ public class SceneSwitcher : MonoBehaviour
     public void backScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        Debug.Log("back");
 
     }
 
@@ -23,5 +24,10 @@ public class SceneSwitcher : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Quit");
+    }
+
+    public void moveToScene()
+    {
+        SceneManager.LoadScene(SceneIndex);
     }
 }
