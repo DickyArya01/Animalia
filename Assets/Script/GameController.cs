@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
     private Sprite bgImage;
 
     [SerializeField]
-    public string pathImage;
+    private string pathImage;
 
     public Sprite[] puzzles;
 
