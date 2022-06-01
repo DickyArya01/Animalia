@@ -10,9 +10,6 @@ public class gameSetting : MonoBehaviour
     private Slider volumeSlider;
 
     [SerializeField]
-    private Slider brightnessSlider;
-
-    [SerializeField]
     private AudioMixer audioMixer;
 
     public void SetVolume(float sliderValue)
