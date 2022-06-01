@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneSwitcher : MonoBehaviour
 {
     [SerializeField]
-    public int SceneIndex;
+    private int SceneIndex;
 
     public void forwardScene()
     {
