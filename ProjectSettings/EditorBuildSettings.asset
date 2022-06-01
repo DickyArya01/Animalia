@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Herbivora/Level.unity
     guid: 423e055ce811ec9449cf27b4ead7d6cf
+  - enabled: 1
+    path: Assets/Scenes/Carnivora/1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
