@@ -2366,6 +2366,7 @@ GameObject:
   - component: {fileID: 1711164321}
   - component: {fileID: 1711164320}
   - component: {fileID: 1711164323}
+  - component: {fileID: 1711164324}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2507,7 +2508,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40fa12a7f34f2644ca2ac2aac18874f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneIndex: 5
+  SceneIndex: 7
+--- !u!114 &1711164324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711164318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656d976c7d2c1e04e8bd17f9ff8e1004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 1711164320}
+  isEnabled: 1
+  levelSprite: {fileID: 1711164321}
+  lockSprite: {fileID: 21300000, guid: 6a97f0bf3eb857442b11e368650e1663, type: 3}
+  btnText: {fileID: 2001398004}
 --- !u!1 &1931642434
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,7 +2583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 902dc16eb3b41c34db2d87baadcdb122, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 384ef5044532b5348815d78661a28e78, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

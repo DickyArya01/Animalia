@@ -287,8 +287,9 @@ GameObject:
   - component: {fileID: 168601821}
   - component: {fileID: 168601820}
   - component: {fileID: 168601819}
+  - component: {fileID: 168601822}
   m_Layer: 5
-  m_Name: AllCategoryLevelBtn
+  m_Name: OmnivoraLevelBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -367,6 +368,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &168601820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,7 +398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5f948ffc05370c547af92de98f761399, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b36cfdfb8511e884d916cc37214fe712, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -404,6 +416,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168601817}
   m_CullTransparentMesh: 0
+--- !u!114 &168601822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168601817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656d976c7d2c1e04e8bd17f9ff8e1004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuSceneIndex: 0
 --- !u!1 &212999152
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +557,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &290444091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 290444092}
+  - component: {fileID: 290444093}
+  m_Layer: 0
+  m_Name: StageController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &290444092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290444091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 304.25793, y: 118.37806, z: 13033.651}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &290444093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290444091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76952122359057b4496047a47de2e946, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvlBtn:
+  - {fileID: 380558040}
+  - {fileID: 168601819}
+  levelSprite:
+  - {fileID: 380558041}
+  - {fileID: 168601820}
+  lockSprite: {fileID: 21300000, guid: bf970dcb223c975429b39759e04900ab, type: 3}
+  unlockSprite: {fileID: 21300000, guid: 846466f6c3e9dd14ba986ae4caa4dbde, type: 3}
+  btnText: []
+  lockSprite2: {fileID: 21300000, guid: 333f8cd48732a4c45af8c896f2e159de, type: 3}
+  unlockSprite2: {fileID: 21300000, guid: b36cfdfb8511e884d916cc37214fe712, type: 3}
 --- !u!1 &367780631
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +624,7 @@ GameObject:
   - component: {fileID: 367780634}
   - component: {fileID: 367780633}
   - component: {fileID: 367780636}
+  - component: {fileID: 367780637}
   m_Layer: 5
   m_Name: CarnivoraLevelBtn
   m_TagString: Untagged
@@ -636,6 +716,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 367780631}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &367780634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,6 +777,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneIndex: 2
+--- !u!114 &367780637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367780631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656d976c7d2c1e04e8bd17f9ff8e1004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuSceneIndex: 0
 --- !u!1 &380558038
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +802,7 @@ GameObject:
   - component: {fileID: 380558042}
   - component: {fileID: 380558041}
   - component: {fileID: 380558040}
+  - component: {fileID: 380558043}
   m_Layer: 5
   m_Name: HerbivoraLevelBtn
   m_TagString: Untagged
@@ -778,6 +883,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 380558038}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &380558041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,6 +931,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380558038}
   m_CullTransparentMesh: 0
+--- !u!114 &380558043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380558038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656d976c7d2c1e04e8bd17f9ff8e1004, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuSceneIndex: 0
 --- !u!1 &483600139
 GameObject:
   m_ObjectHideFlags: 0

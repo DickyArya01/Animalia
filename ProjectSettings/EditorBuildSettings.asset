@@ -15,9 +15,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Carnivora/Level.unity
     guid: a4f38fa901f5cf640b1473a3d787bad7
   - enabled: 1
+    path: Assets/Scenes/Carnivora/1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Carnivora/2.unity
+    guid: 5e563f193808e0349b19196f999b46c8
+  - enabled: 1
     path: Assets/Scenes/Herbivora/Level.unity
     guid: 423e055ce811ec9449cf27b4ead7d6cf
   - enabled: 1
-    path: Assets/Scenes/Carnivora/1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Herbivora/1.unity
+    guid: 1bc4e429c3c773d4d8187d04aa2285fc
+  - enabled: 1
+    path: Assets/Scenes/Omnivora/Level.unity
+    guid: 1b0f96468aeec214aa97bb13228a5471
+  - enabled: 1
+    path: Assets/Scenes/Omnivora/1.unity
+    guid: c138b7bc1c7de554b91b87b1d2662c6c
   m_configObjects: {}

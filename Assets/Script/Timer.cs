@@ -17,9 +17,11 @@ public class Timer : MonoBehaviour
     private int remainingDuration; 
 
 
+
     private void Start()
     {
         Being(Duration);
+        // gc = new GameController();
     }
 
     private void Being(int Second)
@@ -36,11 +38,10 @@ public class Timer : MonoBehaviour
             uiFill.fillAmount = Mathf.InverseLerp(0, Duration, remainingDuration);
             remainingDuration--;
             yield return new WaitForSeconds(1f);
+            //  Debug.Log(remainingDuration);
+            
         }
     }
 
-    public bool OnEnd()
-    {
-        return true;
-    }
+   
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameController : MonoBehaviour
+public class GameController : MonoBehaviour 
 {
     [SerializeField]
     private Sprite bgImage;
@@ -25,25 +25,71 @@ public class GameController : MonoBehaviour
 
     private string firstGuessName, secondGuessName;
 
-    private Timer timer;
 
     [SerializeField]
     private GameObject gameFinished;
 
+    [SerializeField]
+    private GameObject firstStar;
+
+    [SerializeField]
+    private GameObject secondStar;
+
+    [SerializeField]
+    private GameObject thirdStar;
+
+    [SerializeField]
+    private GameObject firstStarFilled;
+
+    [SerializeField]
+    private GameObject secondStarFilled;
+
+    [SerializeField]
+    private GameObject thirdStarFilled;
+
+    [SerializeField]
+    public int Duration;
+
+    private int remainingDuration; 
+
     void Start() {
         
-        timer = new Timer();
+        // timer = new Timer();
         GetButton();
         AddListeners();
         AddGamePuzzles();
         Shuffle(gamePuzzles);
         gameGuesses = gamePuzzles.Count / 2;
+        Being(Duration);
 
+       
     } 
 
     void Awake() {
         puzzles = Resources.LoadAll<Sprite> (pathImage);
     }
+
+    void Update() 
+    {
+        timeUpCondition();
+    }
+
+    private void Being(int Second)
+    {
+        remainingDuration = Second;
+        StartCoroutine(UpdateTimer());
+    }
+
+   public IEnumerator UpdateTimer()
+    {
+        while (remainingDuration >= 0 )
+        {
+            remainingDuration--;
+            yield return new WaitForSeconds(1f);
+            //  Debug.Log(remainingDuration);
+            
+        }
+    } 
 
     void GetButton() {
 
@@ -123,7 +169,35 @@ public class GameController : MonoBehaviour
         yield return new WaitForSeconds(.5f);
 
         firstGuess = secondGuess = false;
+    }
+
+    public void winCondition()
+    {
+        gameFinished.SetActive(true);
+        Time.timeScale = 0f;
+
+        if (countGuesses >= 4 && countGuesses <= 8 )
+        {
+           firstStar.SetActive(false);
+           firstStarFilled.SetActive(true);
+           secondStar.SetActive(false);
+           secondStarFilled.SetActive(true);
+           thirdStar.SetActive(false);
+           thirdStarFilled.SetActive(true);
+        } else if (countGuesses > 8 && countGuesses <= 12 )
+        {
+           firstStar.SetActive(false);
+           firstStarFilled.SetActive(true);
+           secondStar.SetActive(false);
+           secondStarFilled.SetActive(true);
         
+        } else if (countGuesses > 12)
+        {
+           firstStar.SetActive(false);
+           firstStarFilled.SetActive(true);
+
+        }
+
     }
 
     void CheckIfTheGameIsFinished() {
@@ -131,33 +205,16 @@ public class GameController : MonoBehaviour
 
         if(countCorrectGuesses == gameGuesses) {
             Debug.Log("It took "+ countGuesses + " guesses to finished");
-            if(timer.OnEnd())
-            {
-                gameFinished.SetActive(true);
-                Time.timeScale = 0f;
+            winCondition();
+          
+        }
+    }
 
-                if (countGuesses == 4)
-                {
-                    Debug.Log("Bintang 5");
-
-                }else if (countGuesses > 4 && countGuesses <= 6 )
-                {
-                    Debug.Log("Bintang 4");
-                    
-                }else if (countGuesses > 6 && countGuesses <= 8 )
-                {
-                    Debug.Log("Bintang 3");
-
-                }else if (countGuesses > 8 && countGuesses <= 12)
-                {
-                    Debug.Log("Bintang 2");
-
-                }else if (countGuesses > 12)
-                {
-                    Debug.Log("Bintang 1");
-
-                }
-            }
+    void timeUpCondition()
+    {
+        if(remainingDuration == -1)
+        {
+            winCondition();
         }
     }
 
